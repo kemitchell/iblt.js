@@ -8,6 +8,7 @@
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
     "defence-cli": "^2.0.0",
+    "murmurhash": "0.0.2",
     "replace-require-self": "^1.1.1",
     "standard": "^7.1.2"
   },
