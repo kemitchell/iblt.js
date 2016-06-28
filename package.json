@@ -1,7 +1,7 @@
 {
   "name": "iblt",
   "description": "naively implemented Invertible Bloom Lookup Table in pure JavaScript",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "files": [
     "index.js"
   ],
