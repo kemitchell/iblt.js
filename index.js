@@ -16,7 +16,7 @@ function IBLT (options) {
   // Cells
   var T = this.T = []
   var m = this.m = options.m
-  for (var i = 0; i < m; i++) T.push(new Cell())
+  for (var i = 0; i < m; i++) T.push(cell())
 }
 
 function validHashes (argument) {
@@ -109,21 +109,15 @@ IBLT.prototype.clone = function () {
   var m = this.m
   clone.m = this.m
   clone.T = []
-  for (var i = 0; i < m; i++) clone.T.push(T[i].clone())
+  for (var i = 0; i < m; i++) clone.T.push(cloneCell(T[i]))
 
   return clone
 }
 
-function Cell () {
-  this.count = 0
-  this.keySum = 0
-  this.valueSum = 0
+function cell () {
+  return {count: 0, keySum: 0, valueSum: 0}
 }
 
-Cell.prototype.clone = function () {
-  var clone = new Cell()
-  clone.count = this.count
-  clone.keySum = this.keySum
-  clone.valueSum = this.valueSum
-  return clone
+function cloneCell (c) {
+  return {count: c.count, keySum: c.keySum, valueSum: c.valueSum}
 }
