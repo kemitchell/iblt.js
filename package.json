@@ -1,0 +1,15 @@
+{
+  "name": "iblt",
+  "description": "naively implemented Invertible Bloom Lookup Table in pure JavaScript",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "devDependencies": {
+    "defence-cli": "^2.0.0",
+    "replace-require-self": "^1.1.1"
+  },
+  "license": "MIT",
+  "repository": "kemitchell/iblt.js",
+  "scripts": {
+    "test": "defence README.md | replace-require-self | node"
+  }
+}
