@@ -89,12 +89,6 @@ IBLT.prototype.listEntries = function () {
     outputList.push([Ti.keySum, Ti.valueSum])
     this.delete(Ti.keySum, Ti.valueSum)
   }
-  // If at the end of the while-loop all the entries in T are empty, then we
-  // say that the method succeeded and we can confirm that the output list is
-  // the entire set of entries in B. If, on the other hand, there are some
-  // cells in T with non-zero counts, then the method only outputs a partial
-  // list of the key-value pairs in B. This process should appear entirely
-  // familiar to those who work with random graphs
   return {
     succeeded: T.every(function (cell) {
       return cell.count === 0
