@@ -53,6 +53,15 @@ assert(entries.outputList.some(function (x) {
 
 clone.insert(400, 246)
 
+var cells = clone.T
+
+assert(cells.every(function (cell) {
+  return cell &&
+    'count' in cell &&
+    'keySum' in cell &&
+    'valueSum' in cell
+}))
+
 var cloneEntries = clone.listEntries()
 
 assert(cloneEntries.succeeded)
