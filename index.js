@@ -4,8 +4,6 @@ module.exports = IBLT
 // by Goodrich & Mitzenmacher
 // https://arxiv.org/abs/1101.2245
 
-// TODO: Optimize for rehashing
-
 function IBLT (options) {
   if (!this instanceof IBLT) return new IBLT(options)
 
@@ -39,8 +37,6 @@ function validM (argument) {
 }
 
 // See paper pages 7-8
-//
-// TODO: Extraneous duplicate fault tolerance (Paper section 3, page 14-15)
 IBLT.prototype.insert = function (x, y) {
   var T = this.T
   var h = this.h
@@ -54,8 +50,6 @@ IBLT.prototype.insert = function (x, y) {
 }
 
 // See paper page 8
-//
-// TODO: Extraneous deletion fault tolerance (Paper section 3, page 11-14)
 IBLT.prototype.delete = function (x, y) {
   var T = this.T
   var h = this.h
@@ -89,11 +83,6 @@ IBLT.prototype.get = function (x) {
 }
 
 // Paper section 2.4, page 9
-//
-// TODO: "It is a fairly straightforward exercise to implement this method in
-// O(m) time, say, by using a link-list-based priority queue of cells in T
-// indexed by their count fields and modifying the DELETE method to update this
-// queue each time it deletes an entry from B."
 IBLT.prototype.listEntries = function () {
   var outputList = []
   var T = this.T
