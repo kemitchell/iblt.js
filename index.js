@@ -1,9 +1,5 @@
 module.exports = IBLT
 
-// Based on the paper "Invertible Bloom Lookup Tables"
-// by Goodrich & Mitzenmacher
-// https://arxiv.org/abs/1101.2245
-
 function IBLT (options) {
   if (!this instanceof IBLT) return new IBLT(options)
 

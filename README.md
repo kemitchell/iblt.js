@@ -1,3 +1,5 @@
+This package naively implements the data structure described in [_Invertible Bloom Lookup Tables_ by Goodrich & Mitzenmacher](https://arxiv.org/abs/1101.2245).
+
 ```javascript
 var IBLT = require('iblt')
 var assert = require('assert')
